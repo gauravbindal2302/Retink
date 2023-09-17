@@ -1,0 +1,239 @@
+.home-page {
+  min-height: auto;
+  width: 100vw;
+}
+.r1 {
+  display: flex;
+  height: 70vh;
+}
+.r1-c1 {
+  width: 60%;
+  background: #f8e8fe;
+  padding: 15px 50px;
+  text-align: left;
+}
+.r1-c1 span {
+  color: #7e1cfe;
+}
+.r1-c1 h1 {
+  font-size: 40px;
+}
+.r1-c1 h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.r1-c1 h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.r1-c1 .input-field {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: -10px 0;
+}
+
+.r1-c1 .input-field h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.r1-c1 .input-field input {
+  width: 150px;
+  background: none;
+  border: none;
+  outline: none;
+  font-style: italic;
+  margin: 0 10px;
+  color: #7e1cfe;
+  border-bottom: 1px solid #7e1cfe;
+  font-size: 17px;
+}
+.r1-c1 .input-field input:first-child {
+  margin-left: 0;
+}
+.r1-c1 .buttons button {
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 1px solid #7e1cfe;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  margin-top: 40px;
+}
+.r1-c1 .buttons button:hover,
+.r3 .sign-up form .sign-up-buttons button:hover {
+  transform: scale(1.04);
+}
+.r1-c1 .buttons button:nth-child(1),
+.r3 .sign-up form .sign-up-buttons button:nth-child(1) {
+  background-color: #7e1cfe;
+  color: #fff;
+  margin-right: 15px;
+}
+.r1-c1 .buttons button:nth-child(2),
+.r3 .sign-up form .sign-up-buttons button:nth-child(2) {
+  background-color: transparent;
+  color: #7e1cfe;
+}
+.r1-c2 {
+  width: 40%;
+  background: #f8e8fe;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.r1-c2 img {
+  height: 100%;
+}
+.r2 {
+  padding: 30px 0;
+  color: #7e1cfe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.r2 h1 {
+  margin-bottom: 30px;
+}
+.r2 iframe {
+  height: 50vh;
+  width: 60vw;
+}
+.r3 .cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  padding: 50px 80px;
+}
+.r3 .cards .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.r3 .cards .card:hover {
+  transform: scale(1.02);
+  border: 2px solid #7e1cfe;
+  box-shadow: #7e1cfe 1px 1px 10px;
+}
+
+.r3 .cards .card img {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+.r3 .cards .card span {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.r3 .cards .card p {
+  text-align: center;
+  font-size: 14px;
+}
+.r3 .text,
+.r3 .sign-up {
+  padding: 20px 20vw;
+  text-align: center;
+}
+.r3 .text h2,
+.r3 .sign-up h2 {
+  color: #7e1cfe;
+  font-size: 26px;
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+}
+.r3 .text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.r3 .media-cards {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 25px 15vw;
+}
+.r3 .media-cards .media-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.r3 .media-cards .media-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.r3 .media-cards .media-card span {
+  margin: 15px 0;
+  font-size: 20px;
+  position: relative;
+  font-weight: 600;
+}
+
+.r3 .media-cards .media-card span::after {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  background: #7e1cfe;
+  left: 0;
+  bottom: -6px;
+  width: 50%;
+  transition: width 0.3s ease-in-out;
+}
+
+.r3 .media-cards .media-card:hover span::after {
+  width: 100%;
+}
+.r3 .media-cards .media-card p {
+  font-size: 16px;
+}
+
+.r3 .sign-up form {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 18vw;
+}
+.r3 .sign-up form input {
+  background: none;
+  padding: 12px 16px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.r3 .sign-up form .sign-up-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.r3 .sign-up form .sign-up-buttons button {
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.r3 .sign-up form .sign-up-buttons button:nth-child(1) {
+  margin: 0 auto;
+  padding: 15px 40px;
+
+  border: none;
+  margin-bottom: 15px;
+}
+.r3 .sign-up form .sign-up-buttons button:nth-child(2) {
+  background: transparent;
+  border: 1px solid #7e1cfe;
+  padding: 15px 20px;
+}
