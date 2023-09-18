@@ -1,50 +1,133 @@
 .footer-row-1 {
-  height: auto;
-  width: 100vw;
-  padding: 50px 200px;
-  background-color: #ebe8e8;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 200px;
+  background: #f8e8fe;
 }
-.footer-r1-c1 {
+
+.footer-r1-c1,
+.footer-r1-c2,
+.footer-r1-c3 {
+  flex: 1;
+  padding: 20px;
+  color: #000;
   display: flex;
   flex-direction: column;
 }
+
 .footer-r1-c1 img {
   width: 100px;
   margin-bottom: 20px;
 }
+
 .footer-r1-c1 span {
   margin: 8px 0;
+  font-weight: 600;
 }
-.footer-r1-c2 ul li {
+
+.footer-r1-c2 ul {
   list-style: none;
+  padding: 0;
+}
+
+.footer-r1-c2 ul li {
   margin: 8px 0;
+  font-weight: 600;
 }
-.footer-r1-c3 {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+.footer-r1-c3 span {
+  font-weight: 600;
+  margin-bottom: 15px;
 }
+
 .footer-r1-c3 ul {
+  list-style: none;
+  padding: 0;
   display: flex;
+  gap: 20px;
 }
-.footer-r1-c3 ul li {
-  margin-right: 10px;
-}
+
 .footer-row-2 {
-  width: 100vw;
-  padding: 30px 200px;
-  background: #000;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 200px;
+  color: #fff;
+  background: #000;
 }
+
 .footer-row-2 ul {
   list-style: none;
+  padding: 0;
   display: flex;
+  gap: 25px;
 }
-.footer-row-2 ul li {
-  margin-right: 25px;
+
+/* For screens smaller than 768px (Tablet) */
+@media (max-width: 768px) {
+  .footer-row-1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-r1-c1,
+  .footer-r1-c2,
+  .footer-r1-c3 {
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footer-r1-c1 img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .footer-row-2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 50px;
+  }
+
+  .footer-row-2 ul {
+    margin-top: 20px;
+    gap: 0px;
+  }
+}
+
+/* For screens smaller than 480px (Mobile) */
+@media (max-width: 480px) {
+  .footer-row-1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .footer-r1-c1,
+  .footer-r1-c2,
+  .footer-r1-c3 {
+    flex: none;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footer-r1-c1 img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .footer-r1-c2 ul li,
+  .footer-r1-c3 ul li {
+    font-size: 14px;
+  }
+
+  .footer-row-2 {
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .footer-row-2 ul {
+    margin-top: 10px;
+  }
 }

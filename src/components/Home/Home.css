@@ -224,6 +224,7 @@
   border-radius: 10px;
   margin: 0 auto;
   font-size: 15px;
+  cursor: pointer;
 }
 .r3 .sign-up form .sign-up-buttons button:nth-child(1) {
   margin: 0 auto;
@@ -236,4 +237,155 @@
   background: transparent;
   border: 1px solid #7e1cfe;
   padding: 15px 20px;
+}
+
+@media (min-width: 768px) {
+  .r1 {
+    display: flex;
+    height: 70vh;
+  }
+
+  .r1-c1 {
+    width: 60%;
+    background: #f8e8fe;
+    padding: 15px 50px;
+    text-align: left;
+  }
+
+  /* ... Add other tablet/desktop specific styles here */
+}
+
+@media (max-width: 768px) {
+  .r1 {
+    flex-direction: column;
+    height: auto;
+  }
+  .r1-c1,
+  .r1-c2 {
+    width: 100%;
+    background: #f8e8fe;
+    padding: 15px 30px;
+  }
+  .r1-c1 h1 {
+    font-size: 20px;
+  }
+  .r1-c1 h2,
+  .r1-c1 h3 {
+    font-size: 16px;
+  }
+  .r1-c1 .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .r1-c1 .input-field h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .r1-c1 .input-field input {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .r1-c1 .buttons button {
+    padding: 10px 25px;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  .r1-c1 .buttons button:nth-child(1),
+  .r3 .sign-up form .sign-up-buttons button:nth-child(1) {
+    margin-right: 0;
+  }
+  .r1-c1 .buttons button:nth-child(2),
+  .r3 .sign-up form .sign-up-buttons button:nth-child(2) {
+    margin-top: 12px;
+  }
+  .r1-c2 img {
+    width: 70%;
+  }
+  .r2 {
+    padding: 25px;
+    text-align: center;
+  }
+  .r2 h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  .r2 iframe {
+    height: 25vh;
+    width: 80vw;
+  }
+  .r3 .cards {
+    margin: 20px 0 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 20px;
+    padding: 10px 20px;
+  }
+  .r3 .cards .card {
+    padding: 20px 15px;
+  }
+  .r3 .cards .card:hover {
+    box-shadow: #c2a5e9 0px 0px 6px;
+  }
+  .r3 .cards .card img {
+    width: 40px;
+    height: 40px;
+  }
+  .r3 .cards .card span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .r3 .cards .card p {
+    font-size: 12px;
+  }
+  .r3 .text,
+  .r3 .sign-up {
+    padding: 20px 80px;
+  }
+  .r3 .text h2,
+  .r3 .sign-up h2 {
+    font-size: 18px;
+  }
+  .r3 .text p {
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  .r3 .media-cards {
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+  .r3 .media-cards .media-card img {
+    height: auto;
+  }
+  .r3 .media-cards .media-card span {
+    font-size: 16px;
+  }
+  .r3 .media-cards .media-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .r3 .sign-up form {
+    margin: 25px -40px;
+  }
+  .r3 .sign-up form input {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .r3 .sign-up form .sign-up-buttons button {
+    font-size: 14px;
+  }
+  .r3 .sign-up form .sign-up-buttons button:nth-child(1) {
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+  .r3 .sign-up form .sign-up-buttons button:nth-child(2) {
+    padding: 10px 40px;
+    line-height: 1.5;
+    margin: 12px 40px;
+  }
 }

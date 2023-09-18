@@ -5,3 +5,12 @@
 .navbar img {
   height: 35px;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 25px 30px;
+  }
+  .navbar img {
+    height: 24px;
+  }
+}

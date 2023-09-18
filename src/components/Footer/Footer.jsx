@@ -22,12 +22,24 @@ const Footer = () => {
           <div className="footer-r1-c3">
             <span>Connect</span>
             <ul>
-              <li>A</li>
-              <li>B</li>
-              <li>C</li>
-              <li>D</li>
-              <li>E</li>
-              <li>F</li>
+              <li>
+                <img src="Images/facebook.png" alt="Facebook Icon" />
+              </li>
+              <li>
+                <img src="Images/twitter.png" alt="Twitter Icon" />
+              </li>
+              <li>
+                <img src="Images/instagram.png" alt="Instagram Icon" />
+              </li>
+              <li>
+                <img src="Images/linkedin.png" alt="LinkedIn Icon" />
+              </li>
+              <li>
+                <img src="Images/youtube.png" alt="YouTube Icon" />
+              </li>
+              <li>
+                <img src="Images/pinterest.png" alt="Pinterest Icon" />
+              </li>
             </ul>
           </div>
         </div>
