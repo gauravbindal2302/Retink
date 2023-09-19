@@ -1,35 +1,30 @@
-// Navbar.jsx
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = ({ isOpen, toggleMenu }) => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <div className={`navbar ${isMenuOpen ? "open" : ""}`}>
+    <div className="navbar">
       <div className="logo">
         <img src="Images/logo.svg" alt="Retink Logo" />
       </div>
       <div className="menu">
         <div className="menu-1">
-          <button>O</button>
-          <button>O</button>
+          <button>
+            <img src="Images/home.svg" alt="Home" id="icon" />
+          </button>
+          <button>
+            <img src="Images/grid.svg" alt="Grid" id="icon" />
+          </button>
         </div>
         <div className="menu-2">
-          <button>O</button>
-          <button>O</button>
+          <button>
+            <img src="Images/settings.svg" alt="Settings" id="icon" />
+          </button>
+          <button>
+            <img src="Images/export.svg" alt="Export" id="icon" />
+          </button>
         </div>
-        <button className="close-button" onClick={toggleMenu}>
-          X
-        </button>
       </div>
-      <button className="menu-button" onClick={toggleMenu}>
-        {isMenuOpen ? "Close" : "Menu"}
-      </button>
     </div>
   );
 };

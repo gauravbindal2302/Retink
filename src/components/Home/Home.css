@@ -107,7 +107,7 @@
 }
 
 .coins-field img {
-  background: #000;
+  position: relative;
   height: 15px;
   width: 15px;
 }
@@ -126,9 +126,22 @@
 }
 
 .header-col-2 button {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.header-col-2 button img {
   height: 30px;
   width: 30px;
+  object-fit: cover;
+  border-radius: 5px;
 }
+
 .head {
   display: none;
 }
@@ -260,8 +273,8 @@
   font-size: 14px;
   letter-spacing: 0.5px;
 }
-
 @media (max-width: 768px) {
+  /* Add these styles for responsive behavior */
   .home-page {
     flex-direction: column;
   }
@@ -285,6 +298,7 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
+    top: 0;
   }
   .head .part-1 {
     display: flex;
@@ -310,8 +324,8 @@
   }
 
   .head .part-1 button #menu-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
   .head .part-1 button #dp-icon {
     width: 30px;
@@ -408,5 +422,12 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     margin-top: 5px;
+  }
+  .home-page.menu-open .navbar {
+    transform: translateX(0%);
+  }
+  .home-page .navbar {
+    transform: translateY(-700px);
+    transition: transform 0.4s ease-in-out;
   }
 }

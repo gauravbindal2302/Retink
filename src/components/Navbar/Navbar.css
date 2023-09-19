@@ -17,18 +17,43 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  top: 120px;
-  gap: 50vh;
+  top: 130px;
+  gap: 40vh;
 }
 
 .navbar .menu .menu-1,
 .navbar .menu .menu-2 {
-  gap: 6vh;
+  gap: 3vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+.navbar .menu .menu-1 button,
+.menu-2 button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: none;
+  transition: 0.3s ease-in-out;
+}
+.navbar .menu .menu-1 button:hover,
+.navbar .menu .menu-2 button:hover {
+  background: #dbc1fb;
+}
+.navbar .menu .menu-1 button:nth-child(1) {
+  background: #dbc1fb;
+}
 
+#icon {
+  width: 22px;
+  height: 22px;
+}
 /* Tablet */
 @media (max-width: 768px) {
   .navbar {
@@ -40,6 +65,9 @@
     background: #e8def4;
     padding-top: 110px;
     z-index: 2;
+    position: fixed;
+    top: 110px;
+    bottom: 0;
   }
   .navbar .logo {
     display: none;
@@ -50,5 +78,9 @@
     justify-content: flex-start;
     gap: 20px;
     top: 0px;
+  }
+  .navbar .menu .menu-1,
+  .menu-2 {
+    gap: 30px;
   }
 }

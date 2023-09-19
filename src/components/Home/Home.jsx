@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <div className="home-page">
+    <div className={`home-page ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="left">
         <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       </div>
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="header">
           <div className="header-col-1">
             <div className="input">
-              <button>O</button>
+              <button>O</button>{" "}
               <input
                 type="text"
                 placeholder="Search for templates, projects, etc..."
@@ -37,16 +37,23 @@ export default function Home() {
             <div className="button-and-coin">
               <button>Create Content</button>
               <div className="coins-field">
-                <img src="" alt="" />
+                <img src="Images/coins.svg" alt="Coins" />
                 <span>20</span>
               </div>
             </div>
           </div>
           <div className="header-col-2">
-            <button>O</button>
-            <button>O</button>
             <button>
-              <img src="" alt="O" />
+              <img src="Images/calender.svg" alt="Calender" />
+            </button>
+            <button>
+              <img src="Images/bell.svg" alt="Notifications" />
+            </button>
+            <button>
+              <img
+                src="https://square-vn.com/app/dscms/assets/images/person-1.jpg?v=1653932875"
+                alt="User DP"
+              />
             </button>
           </div>
         </div>
@@ -56,7 +63,11 @@ export default function Home() {
               onClick={toggleMenu}
               className={`menu-button ${isMenuOpen ? "active" : ""}`}
             >
-              {isMenuOpen ? "Close" : "Menu"}
+              {isMenuOpen ? (
+                <img src="Images/menu_close.svg" alt="" id="menu-icon" />
+              ) : (
+                <img src="Images/menu.png" alt="" id="menu-icon" />
+              )}
             </button>
 
             <div className="head-logo">
