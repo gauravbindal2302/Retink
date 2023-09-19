@@ -1,99 +1,136 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import data from "./Data.json"; // Import the JSON data
+import Data from "./Data.json";
 
 export default function Home() {
-  const headings = data.headings;
-  const cards = data.cards;
-  const mediaCards = data.mediaCards;
+  const [animateText, setAnimateText] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimateText(true);
+    }, 1000);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <>
-      <div className="home-page">
-        <Navbar />
-        <div className="home-container">
-          <div className="r1">
-            <div className="r1-c1">
-              <h1>{headings.heading1}</h1>
-              <h1>
-                <span>{headings.heading2}</span>
-              </h1>
-              <h2>{headings.subheading}</h2>
-              <h3>
-                <span>{headings.cta}</span>
-              </h3>
-              <div className="input-field">
-                <input type="name" placeholder="Business Name" />
-                <h3>would like a beta invite to</h3>
-                <input type="name" placeholder="Email Address" />
-                <h3>when it's ready!</h3>
-              </div>
-              <div className="buttons">
-                <button>Notify Me</button>
-                <button>Sign Up as a Freelance Partner</button>
+    <div className="home-page">
+      <div className="left">
+        <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      </div>
+      <div className="right">
+        <div className="header">
+          <div className="header-col-1">
+            <div className="input">
+              <button>O</button>
+              <input
+                type="text"
+                placeholder="Search for templates, projects, etc..."
+              />
+              <button>O</button>
+              <button>O</button>
+            </div>
+            <div className="button-and-coin">
+              <button>Create Content</button>
+              <div className="coins-field">
+                <img src="" alt="" />
+                <span>20</span>
               </div>
             </div>
-            <div className="r1-c2">
-              <img src="Images/avatar.png" alt="Retink Avatar" />
-            </div>
           </div>
-          <div className="r2">
-            <h1> Retink Content Solution for Your Business</h1>
-            <iframe
-              src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
-              title=" "
-            ></iframe>
-          </div>
-          <div className="r3">
-            <div className="cards">
-              {cards.map((card, index) => (
-                <div className="card" key={index}>
-                  <img src={card.image} alt={`Card-${index + 1} Icon`} />
-                  <span>{card.title}</span>
-                  <p>{card.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text">
-              <h2>Transform Your Creation Process</h2>
-              <p>
-                With a new approach to ordering content, you can now stop
-                juggling multiple documents and meetings and start publishing
-                content faster and on demand.
-              </p>
-              <h2>Activate Your Business Growth With RetinkContent</h2>
-              <p>
-                Save time and maintain your brand identity within your budget
-                range within your budget range and access multiple content
-                services like:
-              </p>
-            </div>
-            <div className="media-cards">
-              {mediaCards.map((mediaCard, index) => (
-                <div className="media-card" key={index}>
-                  <img src={mediaCard.image} alt={`Media-Card-${index + 1}`} />
-                  <span>{mediaCard.title}</span>
-                  <p>{mediaCard.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="sign-up">
-              <h2>Sign Up for The BETA to See More</h2>
-              <form>
-                <input type="name" placeholder="Business Name" />
-                <input type="name" placeholder="Email Address" />
-                <div className="sign-up-buttons">
-                  <button>Notify Me</button>
-                  <button>Sign Up as a Freelance Partner</button>
-                </div>
-              </form>
-            </div>
+          <div className="header-col-2">
+            <button>O</button>
+            <button>O</button>
+            <button>
+              <img src="" alt="O" />
+            </button>
           </div>
         </div>
-        <Footer />
+        <div className="head">
+          <div className="part-1">
+            <button
+              onClick={toggleMenu}
+              className={`menu-button ${isMenuOpen ? "active" : ""}`}
+            >
+              {isMenuOpen ? "Close" : "Menu"}
+            </button>
+
+            <div className="head-logo">
+              <img src="https://www.retink.io/LOGO.svg" alt="Retink Logo" />
+            </div>
+            <button>
+              <img
+                src="https://square-vn.com/app/dscms/assets/images/person-1.jpg?v=1653932875"
+                alt="User Profile Pic"
+                id="dp-icon"
+              />
+            </button>
+          </div>
+          <div className="part-2">
+            <input
+              type="name"
+              placeholder="Search for templates, projects, etc..."
+            />
+          </div>
+        </div>
+        <div className="body">
+          <div className="row-1">
+            <div className="row-1-r1">
+              <h1 className={animateText ? "fade-in-animation" : ""}>
+                Hey James!
+              </h1>
+              <select>
+                <option>Zara Ventures</option>
+              </select>
+            </div>
+            <div className="row-1-r2">
+              <div className="row-1-r2-c1">
+                <span>Let's create something awesome today</span>
+                <button type="submit">Start Creating</button>
+              </div>
+              <div className="row-1-r2-c2">
+                <span>
+                  You should have more engagement by 6 pm today; try posting
+                  then.
+                </span>
+                <span>
+                  Try our SEO optimization tool to increase engagement by 40%
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="row-2">
+            <h2>Most Popular Tools</h2>
+            <p>Explore the trending tools to create your copies fast.</p>
+          </div>
+
+          <div className="row-3">
+            {Data.Data.map((category, index) => (
+              <div key={index} className="row-3-row">
+                <h3>{category.title}</h3>
+                <div className="cards">
+                  {category.cards.map((card, cardIndex) => (
+                    <div key={cardIndex} className="card">
+                      <div className="card-row-1">
+                        <img src={card.editIcon} alt="O" />
+                        <img src={card.growthIcon} alt="O" />
+                      </div>
+                      <div className="card-row-2">
+                        <span>{card.title}</span>
+                        <p>{card.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

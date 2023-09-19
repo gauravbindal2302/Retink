@@ -1,68 +1,44 @@
 {
-    "headings": {
-      "heading1": "Get Advanced AI + Expert Created",
-      "heading2": "Logos",
-      "subheading": "Boost your sales 10x faster with content customized by our unique partnership of human creativity and AI optimization.",
-      "cta": "Sign Up for The BETA!"
+  "Data": [
+    {
+      "title": "Social media",
+      "cards": [
+        {
+          "editIcon": "O",
+          "growthIcon": "O",
+          "title": "Blog Writing",
+          "description": "Generate the best blog post to fit your audience with just a few clicks of a button."
+        },
+        {
+          "editIcon": "O",
+          "growthIcon": "O",
+          "title": "Product Description",
+          "description": "Instantly generate engaging product descriptions that sell."
+        },
+        {
+          "editIcon": "O",
+          "growthIcon": "O",
+          "title": "Article Writer",
+          "description": "Automatically create unique factual articles at the touch of a button."
+        },
+        {
+          "editIcon": "O",
+          "growthIcon": "O",
+          "title": "Blog Writing",
+          "description": "Generate the best blog post to fit your audience with just a few clicks of a button."
+        }
+      ]
     },
-    "cards": [
-      {
-        "image": "Images/card-1.png",
-        "title": "Make AI-assisted Content Choices and Make it Human",
-        "description": "Access and order from an extensive catalogue in any language and on your budget's terms. If unsure, our AI guides you to the best human- content for your business."
-      },
-      {
-        "image": "Images/card-2.png",
-        "title": "Upload and Maintain Your Brand Identity",
-        "description": "Add your preferences and brand assets to ensure the content is consistent with your brand identity. No brand asset? We can make it for you!"
-      },
-      {
-        "image": "Images/card-3.png",
-        "title": "Be Informed as We Create",
-        "description": "Your details are translated and sent to the AI, FP, or both (per your choice) as you relax and receive continuous updates."
-      },
-      {
-        "image": "Images/card-4.png",
-        "title": "Receive and Review",
-        "description": "Track your content metrics for improvement and content strategy."
-      },
-      {
-        "image": "Images/card-5.png",
-        "title": "Publish and Monitor Your Contents' Progress",
-        "description": "The finished content is delivered and you can make corrections that we will effect to satisfy your requirements."
-      }
-    ],
-    "mediaCards": [
-      {
-        "image": "Images/media-card-1.jpg",
-        "title": "Logos",
-        "description": "Create a distinct logo designed to express and represent your brand identity."
-      },
-      {
-        "image": "Images/media-card-2.jpg",
-        "title": "Blog Writing",
-        "description": "Write SEO enriched blog posts as long or short articles on any topic of your choice."
-      },
-      {
-        "image": "Images/media-card-3.jpg",
-        "title": "Animated Videos",
-        "description": "Bring animated characters to life to keep your viewers engaged and entertained."
-      },
-      {
-        "image": "Images/media-card-4.jpg",
-        "title": "Product Demo",
-        "description": "Introduce your product to potential customers in a clear and creative video."
-      },
-      {
-        "image": "Images/media-card-5.jpg",
-        "title": "Copywriting",
-        "description": "Write compelling copies to boost your product, brand, service, or company."
-      },
-      {
-        "image": "Images/media-card-6.jpg",
-        "title": "Social Media Ads",
-        "description": "Boost sales and awareness with tailor-made ads from experts."
-      }
-    ]
-  }
-  
+    {
+      "title": "Another Category",
+      "cards": [
+        {
+          "editIcon": "O",
+          "growthIcon": "O",
+          "title": "Sample Title",
+          "description": "Sample description text."
+        }
+      ]
+    }
+  ]
+}
